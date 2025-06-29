@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar"; // Upravený import pro Navbar
-import Footer from "@/components/Footer"; // Upravený import pro Footer
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Moje Next.js Aplikace", // Změněný titulek
-  description: "Vytvořeno pomocí Next.js a Tailwind CSS", // Změněný popis
+  title: "Moje Next.js Aplikace",
+  description: "Vytvořeno pomocí Next.js a Tailwind CSS",
 };
 
 export default function RootLayout({
@@ -25,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="cs"> {/* Změněno na češtinu */}
+    <html lang="cs">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
       >
