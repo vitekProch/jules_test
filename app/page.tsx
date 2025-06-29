@@ -1,4 +1,5 @@
-import ReviewsCarousel from '@/components/reviews/ReviewsCarousel'; // Přidán import
+import ReviewsCarousel from '@/components/reviews/ReviewsCarousel';
+import PortfolioCarousel from '@/components/portfolio/PortfolioCarousel'; // Přidán import pro PortfolioCarousel
 
 export default function Home() {
   const heroBackgroundImage = '/images/homepageImages/uvodni_foto_vetsi.jpeg'; // Ujistěte se, že tento obrázek existuje v public/images/homepageImages/
@@ -108,6 +109,16 @@ export default function Home() {
             Vaše reakce
           </h2>
           <ReviewsCarousel />
+        </div>
+      </section>
+
+      {/* Sekce Portfolio */}
+      <section id="portfolio" className="bg-[#fdd154] py-12 sm:py-16 md:py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-8 sm:mb-12">
+            Portfolio
+          </h2>
+          <PortfolioCarousel />
         </div>
       </section>
     </main>
