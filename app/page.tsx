@@ -55,6 +55,45 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Sekce O mně */}
+      <section id="o-mne" className="bg-[#fdd154] py-12 sm:py-16 md:py-20">
+        <div className="container mx-auto px-4"> {/* Přidán kontejner pro omezení šířky obsahu sekce */}
+          <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-8 sm:mb-12">
+            O mně
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+            {/* Kontejner pro text - na mobilu první, na desktopu druhý (vpravo) */}
+            <div className="md:order-2 flex flex-col text-gray-700">
+              <h3 className="text-2xl sm:text-3xl font-semibold mb-4">
+                BcA. Hana Jedličková
+              </h3>
+              <p className="mb-4 text-base sm:text-lg leading-relaxed">
+                Vítám tě na svých stránkách. Líbí se ti moje práce a chceš také takové fotografie? Mrkni na to, kdo tě bude fotit.
+              </p>
+              <p className="mb-2 text-base sm:text-lg italic">
+                Kdo jsem?
+              </p>
+              <p className="mb-6 text-base sm:text-lg leading-relaxed">
+                Jmenuji se Hana Jedličková a v oboru fotografie se pohybuji už od dětství. Vše začalo, už když mi bylo 11 let a já dostala svůj první fotoaparát. Od té doby se fotografie stala moji životní cestou. Není to pro mě pouze koníček či práce. Je to dalo by se říci můj životní směr, ve kterém jsem se rozhodla zdokonalovat a vložit do toho kus sebe. Své znalosti v oboru jsem rozvíjela jak na střední, tak i na vysoké škole.
+              </p>
+              <div className="mt-auto text-right"> {/* Zarovná odkaz "Čti dále" dolů a doprava */}
+                <a href="#" className="text-yellow-600 hover:text-yellow-700 font-semibold hover:underline transition-colors">
+                  Čti dále...
+                </a>
+              </div>
+            </div>
+            {/* Kontejner pro fotografii - na mobilu druhý, na desktopu první (vlevo) */}
+            <div className="md:order-1">
+              <img
+                src="/images/homepageImages/uvodni_foto_hanka.jpg"
+                alt="Fotografie Hanky Jedličkové"
+                className="w-full h-auto max-h-[500px] object-cover rounded-lg shadow-lg mx-auto"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
