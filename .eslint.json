@@ -1,0 +1,43 @@
+{
+  "extends": ["plugin:react-hooks/recommended", "plugin:sonarjs/recommended-legacy", "plugin:@tanstack/query/recommended"],
+  "plugins": ["react", "react-hooks", "@typescript-eslint", "no-relative-import-paths", "sonarjs", "import"],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "no-restricted-imports": "off",
+    "import/no-unresolved": "off",
+    "import/extensions": "off",
+    "import/no-relative-packages": "off",
+    "import/default": "off",
+    "no-sequences": "error",
+    "@typescript-eslint/consistent-type-imports": [
+      "error",
+      {
+        "prefer": "type-imports",
+        "fixStyle": "inline-type-imports"
+      }
+    ],
+    "@typescript-eslint/no-unnecessary-condition": "error",
+    "no-relative-import-paths/no-relative-import-paths": [
+      "error",
+      {
+        "allowSameFolder": true,
+        "allowedDepth": 1,
+        "rootDir": "./src",
+        "prefix": "@"
+      }
+    ],
+    "object-shorthand": "error",
+    "multiline-comment-style": "off",
+    "no-shadow": ["error"],
+    "sonarjs/no-redundant-jump": "off",
+    "import/no-cycle": [
+      "error",
+      {
+        "maxDepth": 10
+      }
+    ]
+  },
+  "ignorePatterns": ["*/.js"]
+}
