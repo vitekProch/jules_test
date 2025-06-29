@@ -88,7 +88,11 @@ export default function Home() {
               <img
                 src="/images/homepageImages/uvodni_foto_hanka.jpg"
                 alt="Fotografie Hanky Jedličkové"
-                className="w-full h-auto max-h-[500px] object-cover rounded-lg shadow-lg mx-auto"
+                className="w-full h-auto object-cover object-top rounded-lg shadow-lg mx-auto md:max-h-[calc(100vh-10rem)]"
+                // md:max-h-[calc(100vh-10rem)] je příklad, jak omezit výšku na desktopu,
+                // aby nebyla příliš velká, pokud je text krátký. 10rem je odhad pro paddingy a nadpis.
+                // Pokud chceme, aby výška byla omezena pouze výškou textového bloku, toto není nutné
+                // a `items-center` na gridu by to mělo zařídit. Prozatím to nechávám bez explicitní max-h na desktopu.
               />
             </div>
           </div>
