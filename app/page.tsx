@@ -5,10 +5,10 @@ export default function Home() {
   const heroBackgroundImage = '/images/homepageImages/uvodni_foto_vetsi.jpeg';
 
   const socialImages = [
-    { id: 1, src: '/uploads/social/1.jpg', alt: 'Social media image 1' },
-    { id: 2, src: '/uploads/social/2.jpg', alt: 'Social media image 2' },
-    { id: 3, src: '/uploads/social/3.jpg', alt: 'Social media image 3' },
-    { id: 4, src: '/uploads/social/4.jpg', alt: 'Social media image 4' },
+    { id: 1, src: '/images/socialMedia/1.jpg', alt: 'Social media image 1' },
+    { id: 2, src: '/images/socialMedia/2.jpg', alt: 'Social media image 2' },
+    { id: 3, src: '/images/socialMedia/3.jpg', alt: 'Social media image 3' },
+    { id: 4, src: '/images/socialMedia/4.jpg', alt: 'Social media image 4' },
   ];
 
   return (
@@ -131,21 +131,21 @@ export default function Home() {
       </section>
 
       {/* Sekce Sociální sítě */}
-      <section id="social" className="bg-white py-12 sm:py-16 md:py-20">
-        <div className="container mx-auto px-4">
+      <section id="social" className="bg-white pt-12 sm:pt-16 md:pt-20">
+        <div className="mx-auto  max-w-[105rem]">
           <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-8 sm:mb-12">
             Sleduj mě na sociálních sítích
           </h2>
           <div className="relative">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               {socialImages.map((image) => (
-                <div key={image.id} className="relative aspect-square">
+                <div key={image.id} className="relative">
                   <img
                     src={image.src}
                     alt={image.alt}
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-black/40"></div> {/* Tmavá překryvná vrstva */}
+                  <div className="absolute inset-0 bg-black/60"></div> {/* Tmavá překryvná vrstva */}
                 </div>
               ))}
             </div>
@@ -153,15 +153,15 @@ export default function Home() {
             <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
               <a
                 href="#"
-                className="bg-white text-gray-800 font-semibold py-3 px-10 rounded-lg shadow-lg transition-transform hover:scale-105"
+                className="border-white w-[50%] text-center border-2 text-white py-3 px-10 rounded-lg shadow-lg transition-transform hover:scale-105"
               >
-                Facebook
+                FACEBOOK
               </a>
               <a
                 href="#"
-                className="mt-4 bg-white text-gray-800 font-semibold py-3 px-10 rounded-lg shadow-lg transition-transform hover:scale-105"
+                className="mt-4 border-white w-[50%] text-center border-2 text-white py-3 px-10 rounded-lg shadow-lg transition-transform hover:scale-105"
               >
-                Instagram
+                INSTAGRAM
               </a>
             </div>
           </div>

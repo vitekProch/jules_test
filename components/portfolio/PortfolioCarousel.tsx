@@ -26,7 +26,7 @@ const PortfolioCarousel: React.FC = () => {
   }
 
   return (
-    <div className="w-full max-w-[105rem]">
+    <div className="w-full mx-auto realtive max-w-[105rem]">
       <Swiper
         modules={[Navigation]}
         navigation={true}
