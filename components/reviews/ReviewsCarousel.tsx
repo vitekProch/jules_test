@@ -16,7 +16,7 @@ const ReviewsCarousel: React.FC = () => {
     return <p className="text-center text-gray-500">Žádné recenze k zobrazení.</p>;
   }
 
-  }
+
 
   // Definice vlastních šipek
   const CustomArrow = ({ onClick, direction, disabled }: { onClick: () => void; direction: 'prev' | 'next'; disabled: boolean }) => {
@@ -75,7 +75,7 @@ const ReviewsCarousel: React.FC = () => {
         }
       >
         {reviewImages.map((image) => (
-          <div key={image.id} className="flex justify-center items-center h-[650px] bg-gray-100">
+          <div key={image.id} className="flex justify-center items-center h-[650px]">
             <img
               src={image.src}
               alt={image.alt}
@@ -86,6 +86,6 @@ const ReviewsCarousel: React.FC = () => {
       </Carousel>
     </div>
   );
-};
+  }
 
 export default ReviewsCarousel;

@@ -13,11 +13,11 @@ import { Navigation } from 'swiper/modules';
 const portfolioItems = [
   { id: 1, src: '/uploads/categories/pary.jpg', category: 'Páry' },
   { id: 2, src: '/uploads/categories/mazlicci.jpg', category: 'Mazlíčci' },
-  { id: 3, src: '/uploads/categories/svatby.jpg', category: 'Svatby' },
+  { id: 3, src: '/uploads/categories/rodina-s-rodinou.jpg', category: 'Svatby' },
   { id: 4, src: '/uploads/categories/glamour.jpg', category: 'Glamour/Akty' },
-  { id: 5, src: '/uploads/categories/tehotenske.jpg', category: 'Těhotenské' },
+  { id: 5, src: '/uploads/categories/pary.jpg', category: 'Těhotenské' },
   // Přidávám šestou položku pro lepší funkčnost loopu, pokud by bylo málo slidů
-  { id: 6, src: '/uploads/categories/rodinne.jpg', category: 'Rodinné' },
+  { id: 6, src: '/uploads/categories/rodina-s-rodinou.jpg', category: 'Rodinné' },
 ];
 
 const PortfolioCarousel: React.FC = () => {
@@ -26,9 +26,8 @@ const PortfolioCarousel: React.FC = () => {
   }
 
   return (
-    <div className="w-full relative">
+    <div className="w-full max-w-[105rem]">
       <Swiper
-        modules={[Navigation]}
         modules={[Navigation]}
         navigation={true}
         loop={portfolioItems.length >= 8}
@@ -48,11 +47,10 @@ const PortfolioCarousel: React.FC = () => {
             spaceBetween: 0,
           },
         }}
-        className="portfolio-swiper"
       >
         {portfolioItems.map((item) => (
           <SwiperSlide key={item.id}>
-            <div className="relative aspect-[4/3] bg-gray-200"> {/* Změna poměru stran na 4:3 */}
+            <div className=""> {/* Změna poměru stran na 4:3 */}
               <img
                 src={item.src}
                 alt={`Portfolio fotografie - ${item.category}`}
