@@ -50,14 +50,13 @@ body {
   font-weight: bold;
 }
 
-/* Posunutí šipek mírně vně obsahu slidů */
-/* Tyto hodnoty bude možná potřeba doladit podle finálního vzhledu a mezer */
+/* Posunutí šipek více ke krajům pro širší layout */
 .portfolio-swiper .swiper-button-prev {
-  left: -10px;
+  left: 10px; /* Posunuto dovnitř od okraje viewportu */
 }
 
 .portfolio-swiper .swiper-button-next {
-  right: -10px;
+  right: 10px; /* Posunuto dovnitř od okraje viewportu */
 }
 
 /* Skrytí šipek na velmi malých obrazovkách, kde je jen jeden slide a loop nemusí být aktivní */

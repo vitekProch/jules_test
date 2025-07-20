@@ -114,7 +114,8 @@ export default function Home() {
 
       {/* Sekce Portfolio */}
       <section id="portfolio" className="bg-[#fdd154] py-12 sm:py-16 md:py-20">
-        <div className="container mx-auto px-4">
+        {/* Kontejner pro portfolio, který je širší */}
+        <div className="w-full px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-8 sm:mb-12">
             Portfolio
           </h2>

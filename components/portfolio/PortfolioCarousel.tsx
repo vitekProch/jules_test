@@ -31,31 +31,28 @@ const PortfolioCarousel: React.FC = () => {
         modules={[Navigation]}
         modules={[Navigation]}
         navigation={true}
-        loop={portfolioItems.length >= 8} // Potřebujeme alespoň 2x max slidesPerView pro plynulý loop
-        slidesPerView={1} // Výchozí pro šířky < 550px
-        spaceBetween={10}  // Menší mezera pro jeden slide
+        loop={portfolioItems.length >= 8}
+        slidesPerView={1}
+        spaceBetween={0} // Odstraněna mezera mezi slidy
         breakpoints={{
-          // od 550px do 799px
           550: {
             slidesPerView: 2,
-            spaceBetween: 15,
+            spaceBetween: 0,
           },
-          // od 800px do 1029px
           800: {
             slidesPerView: 3,
-            spaceBetween: 20,
+            spaceBetween: 0,
           },
-          // od 1030px a více
           1030: {
             slidesPerView: 4,
-            spaceBetween: 20,
+            spaceBetween: 0,
           },
         }}
         className="portfolio-swiper"
       >
         {portfolioItems.map((item) => (
           <SwiperSlide key={item.id}>
-            <div className="relative aspect-square bg-gray-200">
+            <div className="relative aspect-[4/3] bg-gray-200"> {/* Změna poměru stran na 4:3 */}
               <img
                 src={item.src}
                 alt={`Portfolio fotografie - ${item.category}`}
