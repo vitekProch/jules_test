@@ -1,8 +1,15 @@
 import ReviewsCarousel from '@/components/reviews/ReviewsCarousel';
-import PortfolioCarousel from '@/components/portfolio/PortfolioCarousel'; // Přidán import pro PortfolioCarousel
+import PortfolioCarousel from '@/components/portfolio/PortfolioCarousel';
 
 export default function Home() {
-  const heroBackgroundImage = '/images/homepageImages/uvodni_foto_vetsi.jpeg'; // Ujistěte se, že tento obrázek existuje v public/images/homepageImages/
+  const heroBackgroundImage = '/images/homepageImages/uvodni_foto_vetsi.jpeg';
+
+  const socialImages = [
+    { id: 1, src: '/uploads/social/1.jpg', alt: 'Social media image 1' },
+    { id: 2, src: '/uploads/social/2.jpg', alt: 'Social media image 2' },
+    { id: 3, src: '/uploads/social/3.jpg', alt: 'Social media image 3' },
+    { id: 4, src: '/uploads/social/4.jpg', alt: 'Social media image 4' },
+  ];
 
   return (
     <main>
@@ -122,6 +129,65 @@ export default function Home() {
           <PortfolioCarousel />
         </div>
       </section>
+
+      {/* Sekce Sociální sítě */}
+      <section id="social" className="bg-white py-12 sm:py-16 md:py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-8 sm:mb-12">
+            Sleduj mě na sociálních sítích
+          </h2>
+          <div className="relative">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+              {socialImages.map((image) => (
+                <div key={image.id} className="relative aspect-square">
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/40"></div> {/* Tmavá překryvná vrstva */}
+                </div>
+              ))}
+            </div>
+            {/* Kontejner pro tlačítka, absolutně pozicovaný uprostřed mřížky */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
+              <a
+                href="#"
+                className="bg-white text-gray-800 font-semibold py-3 px-10 rounded-lg shadow-lg transition-transform hover:scale-105"
+              >
+                Facebook
+              </a>
+              <a
+                href="#"
+                className="mt-4 bg-white text-gray-800 font-semibold py-3 px-10 rounded-lg shadow-lg transition-transform hover:scale-105"
+              >
+                Instagram
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
+
+// Komponenta pro sekci sociálních sítí
+const SocialSection = () => {
+  const socialImages = [
+    { id: 1, src: '/uploads/social/1.jpg', alt: 'Social media image 1' },
+    { id: 2, src: '/uploads/social/2.jpg', alt: 'Social media image 2' },
+    { id: 3, src: '/uploads/social/3.jpg', alt: 'Social media image 3' },
+    { id: 4, src: '/uploads/social/4.jpg', alt: 'Social media image 4' },
+  ];
+
+  return (
+    <section id="social" className="bg-white py-12 sm:py-16 md:py-20">
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-8 sm:mb-12">
+          Sleduj mě na sociálních sítích
+        </h2>
+        {/* Zde bude mřížka a tlačítka */}
+      </div>
+    </section>
+  );
+};
